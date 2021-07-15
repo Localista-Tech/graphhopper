@@ -61,12 +61,14 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
+        <!--
         <dependency>
             <groupId>com.graphhopper</groupId>
             <artifactId>graphhopper-core</artifactId>
             <version>${project.parent.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
-        </dependency>        
+        </dependency>
+        -->
     </dependencies>
 </project>
