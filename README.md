@@ -5,6 +5,21 @@
 GraphHopper is a fast and memory efficient Java routing engine, released under Apache License 2.0.
 By default it uses OpenStreetMap and GTFS data, but it can import other data sources.
 
+## GraphHopper custom libs by Localista Tech
+
+This is a custom fork made by Localista Tech, with specific changes for its applications.
+
+The repository and its branches:
+
+* The branch `localista` was branched from `ors_0.13`. It is used as the main branch for the Localista Tech applications.
+* The branch `localista` receives changes from other `localista_*` branches.
+* The `localista_*` branches are used to develop new features or make corrections needed by Localista Tech. These branches might be used to serve those changes to origin project [GIScience/graphhopper](https://github.com/GIScience/graphhopper).
+
+
+*Original README.md from this point onwards.*
+
+-----
+
 # Community
 
 We have a prospering community and welcome everyone. Let us know your problems, use cases or just [say hello](https://discuss.graphhopper.com/). Please see our [community guidelines](https://graphhopper.com/agreements/cccoc.html).
