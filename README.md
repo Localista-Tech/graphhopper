@@ -1,11 +1,11 @@
 # GraphHopper Routing Engine
 
-[![Build Status](https://secure.travis-ci.org/graphhopper/graphhopper.png?branch=master)](http://travis-ci.org/graphhopper/graphhopper)
-
 GraphHopper is a fast and memory efficient Java routing engine, released under Apache License 2.0.
 By default it uses OpenStreetMap and GTFS data, but it can import other data sources.
 
-## GraphHopper custom libs by Localista Tech
+-----
+
+# GraphHopper custom libs by Localista Tech
 
 This is a custom fork made by Localista Tech, with specific changes for its applications.
 
@@ -13,14 +13,14 @@ The repository and its branches:
 
 * The branch `localista` was branched from `ors_0.13`. It is used as the main branch for the Localista Tech applications.
 * The branch `localista` receives changes from other `localista_*` branches.
-* The `localista_*` branches are used to develop new features or make corrections needed by Localista Tech. These branches might be used to serve those changes to origin project [GIScience/graphhopper](https://github.com/GIScience/graphhopper).
+* The `localista_*` branches are used to develop new features or make corrections needed by Localista Tech. These branches might be used to serve those changes to the origin project [GIScience/graphhopper](https://github.com/GIScience/graphhopper).
 
-### Branches created for features:
+## Branches created for features:
 
-* `localista_ors_0.13-custom_ors_preparation`, branched from `localista`. Containes changes on how the packages `graphhopper-api`, `graphhopper-core` and `graphhopper-reader-osm` are compiled. These packages will be used by the [Localista Tech's custom fork of OpenRouteService](https://github.com/Localista-Tech/openrouteservice).
+* **[MERGED]** `localista_ors_0.13-custom_ors_preparation`, branched from `localista`. Containes changes on how the packages `graphhopper-api`, `graphhopper-core` and `graphhopper-reader-osm` are compiled. These packages will be used by the [Localista Tech's custom fork of OpenRouteService](https://github.com/Localista-Tech/openrouteservice).
 
 
-### Packaging and usage with OpenRouteService
+## Packaging and usage with OpenRouteService
 
 OpenRouteService (ORS) uses some libs/sub-projects from GraphHopper:
 * `graphhopper-api`
@@ -29,11 +29,11 @@ OpenRouteService (ORS) uses some libs/sub-projects from GraphHopper:
 
 To use a custom version of GraphHopper at ORS, on must do the changes, package the specific libs/sub-projects and add them to ORS.
 
-#### Packaging
+### Packaging
 
-##### 1. GraphHopper API
+#### 1. GraphHopper API
 
-###### Step 1.1: Build `graphhopper-api`
+##### Step 1.1: Build `graphhopper-api`
 
 At the project's root (`graphhopper/`), run:
 
@@ -43,7 +43,7 @@ $ mvn package -pl :graphhopper-api -Dmaven.test.skip=true
 
 It creates the file `graphhopper-api-0.13-SNAPSHOT.jar` at `/graphhopper/api/target/`.
 
-###### Step 1.2: Install `graphhopper-api`
+##### Step 1.2: Install `graphhopper-api`
 
 Install `graphhopper-api` at the local Maven repository, so it can be used by the other artifacts when compiling.
 
@@ -54,9 +54,9 @@ $ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=ap
 ```
 
 
-##### 2. GraphHopper Core
+#### 2. GraphHopper Core
 
-###### Step 2.1: build `graphhopper-core`
+##### Step 2.1: build `graphhopper-core`
 
 At the project's root (`graphhopper/`), run:
 
@@ -68,7 +68,7 @@ Notice the `-am` flag. It activates the build of other projects required by `gra
 
 It creates the file `graphhopper-core-0.13-SNAPSHOT.jar` at `/graphhopper/core/target/`.
 
-###### Step 2.2: Install `graphhopper-core`
+##### Step 2.2: Install `graphhopper-core`
 
 Install `graphhopper-core` at the local Maven repository, so it can be used by the other artifacts when compiling.
 
@@ -79,9 +79,9 @@ $ mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=co
 ```
 
 
-##### 3. GraphHopper Reader OSM
+#### 3. GraphHopper Reader OSM
 
-###### Step 3.1: build `graphhopper-reader-osm`
+##### Step 3.1: build `graphhopper-reader-osm`
 
 At the project's root (`graphhopper/`), run:
 
@@ -91,11 +91,13 @@ $ mvn package -pl :graphhopper-reader-osm -Dmaven.test.skip=true
 
 It creates the file `graphhopper-reader-osm-0.13-SNAPSHOT.jar` at `/graphhopper/reader-osm/target/`.
 
-#### Usage with OpenRouteService
+### Usage with OpenRouteService
 
 Copy the `.jar` files to the OpenRouteService project. E.g., stored them at a `libs/` folder in the root of the project.
 One must install them at the local repository, so they can be available to be used by ORS.
 
+
+-----
 
 *Original README.md from this point onwards.*
 
